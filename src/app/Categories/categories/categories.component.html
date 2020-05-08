@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-4">
+  <div class="col-md-2">
     <div class="list-group text-center" id="list-tab" role="tablist">
       <a
         class="list-group-item list-group-item-action active"
@@ -66,7 +66,7 @@
       >
     </div>
   </div>
-  <div class="col-8">
+  <div class="col-md-10">
     <div class="tab-content" id="nav-tabContent">
       <div
         class="tab-pane fade show active"
@@ -74,7 +74,10 @@
         role="tabpanel"
         aria-labelledby="list-home-list"
       >
-        ALL BOOKS
+        <app-book-list
+          [BOOKNAME]="'MYBOOK'"
+          [AUTHORNAME]="'ABHISHEK N'"
+        ></app-book-list>
       </div>
       <div
         class="tab-pane fade"
