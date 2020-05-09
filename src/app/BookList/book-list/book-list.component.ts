@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
+import "material-design-icons/iconfont/material-icons.css";
+import { Books } from "src/app/Store/AllBooksData";
+import { LibraryserviceService } from "src/app/service/libraryservice.service";
 
 @Component({
   selector: "app-book-list",
@@ -8,20 +11,29 @@ import { Component, OnInit, Input } from "@angular/core";
 export class BookListComponent implements OnInit {
   @Input() BOOKNAME: string;
   @Input() AUTHORNAME: string;
+  @Input() Like: number;
+  @Input() IconName: string;
+  @Input() id: number;
 
-  constructor() {}
-  like = "fas fa-hear";
-  ngOnInit(): void {
-    document.getElementById("heart").className = "far fa-heart";
-    console.log(this.BOOKNAME, this.AUTHORNAME);
-  }
+  constructor(private service: LibraryserviceService) {}
+  IconColor = "black";
+  like = "favorite_border";
+  ngOnInit(): void {}
   liked() {
-    let ele = document.getElementById("heart").className;
-    ele === "far fa-heart"
-      ? ((ele = "fas fa-heart"),
-        (document.getElementById("heart").style.color = "red"))
-      : ((ele = "far fa-heart"),
-        (document.getElementById("heart").style.color = "black"));
-    document.getElementById("heart").className = ele;
+    let returnedBook;
+    returnedBook = this.service.MyBook.find((book) => book.id === this.id);
+    let returndecIndex = this.service.MyBook.findIndex(
+      (book) => book === returnedBook
+    );
+
+    this.IconName === "favorite_border"
+      ? ((this.IconName = "favorite"),
+        (this.IconColor = "red"),
+        (this.service.MyBook[returndecIndex].Likes =
+          this.service.MyBook[returndecIndex].Likes + 1))
+      : ((this.IconName = "favorite_border"),
+        (this.IconColor = "black"),
+        (this.service.MyBook[returndecIndex].Likes =
+          this.service.MyBook[returndecIndex].Likes - 1));
   }
 }

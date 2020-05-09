@@ -1,4 +1,4 @@
-<div class="card" style="width: 14rem; border-radius: 25px;">
+<div class="card mb-4 mx-auto" style="width: 14rem; border-radius: 25px;">
   <img
     src="https://blog.studocu.com/wp-content/uploads/2017/08/best-books-book-youll-ever-read.jpg"
     class="card-img-top"
@@ -23,11 +23,18 @@
       </button>
       <div style="display: flex; flex-direction: column; align-self: flex-end;">
         <i
-          style="font-size: 25px; padding-bottom: 0px; cursor: pointer;"
+          [ngStyle]="{
+            'font-size': '25px',
+            'padding-bottom': '0px',
+            cursor: 'pointer',
+            color: IconColor
+          }"
           id="heart"
+          class="material-icons"
           (click)="liked()"
-        ></i>
-        <span style="font-size: 10px;">1 LIKE</span>
+          >{{ IconName }}</i
+        >
+        <span style="font-size: 10px;">{{ Like }} LIKE</span>
       </div>
     </div>
   </div>

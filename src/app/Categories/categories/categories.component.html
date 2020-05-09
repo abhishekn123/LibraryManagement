@@ -74,10 +74,17 @@
         role="tabpanel"
         aria-labelledby="list-home-list"
       >
-        <app-book-list
-          [BOOKNAME]="'MYBOOK'"
-          [AUTHORNAME]="'ABHISHEK N'"
-        ></app-book-list>
+        <div class="row mt-3">
+          <div class="col mx-auto" *ngFor="let Book of AllBooks">
+            <app-book-list
+              [BOOKNAME]="Book.Name"
+              [AUTHORNAME]="Book.Author"
+              [Like]="Book.Likes"
+              [IconName]="icon"
+              [id]="Book.id"
+            ></app-book-list>
+          </div>
+        </div>
       </div>
       <div
         class="tab-pane fade"
