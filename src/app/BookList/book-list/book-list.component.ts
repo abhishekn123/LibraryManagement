@@ -15,7 +15,11 @@ export class BookListComponent implements OnInit {
   @Input() IconName: string;
   @Input() id: number;
 
-  constructor(private service: LibraryserviceService) {}
+  constructor(private service: LibraryserviceService) {
+    this.like === "favorite"
+      ? this.like === "favorite"
+      : this.like === "favorite_border";
+  }
   IconColor = "black";
   like = "favorite_border";
   ngOnInit(): void {}
@@ -26,12 +30,12 @@ export class BookListComponent implements OnInit {
       (book) => book === returnedBook
     );
 
-    this.IconName === "favorite_border"
-      ? ((this.IconName = "favorite"),
+    this.like === "favorite_border"
+      ? ((this.like = "favorite"),
         (this.IconColor = "red"),
         (this.service.MyBook[returndecIndex].Likes =
           this.service.MyBook[returndecIndex].Likes + 1))
-      : ((this.IconName = "favorite_border"),
+      : ((this.like = "favorite_border"),
         (this.IconColor = "black"),
         (this.service.MyBook[returndecIndex].Likes =
           this.service.MyBook[returndecIndex].Likes - 1));

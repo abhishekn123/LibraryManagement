@@ -1,38 +1,38 @@
-export const Books = [
+export const Business = [
   {
     id: 1,
-    Name: "PersiPolis",
-    Author: "Marjane Satrapi",
+    Name: "Outliers",
+    Author: "Malcolm",
     Likes: 1,
   },
   {
     id: 2,
-    Name: "The Hobbit",
-    Author: "J.R.T Tolkien",
+    Name: "The Richest Man",
+    Author: "George S",
     Likes: 2,
   },
   {
     id: 3,
-    Name: "Hatchet",
-    Author: "Gary Paulsen",
+    Name: "The Millionarie",
+    Author: "William D",
     Likes: 3,
   },
   {
     id: 4,
-    Name: "Titanic",
-    Author: "pary pope",
+    Name: "The Blink",
+    Author: "Gladwell",
     Likes: 4,
   },
   {
     id: 5,
-    Name: "The Night",
-    Author: "Elie Wiesiel",
+    Name: "Good to great",
+    Author: "James c",
     Likes: 5,
   },
   {
     id: 6,
-    Name: "In Cold Blood",
-    Author: "Truman",
+    Name: "The Four Hour Work Week",
+    Author: "Timothy",
     Likes: 6,
   },
   {
@@ -55,14 +55,14 @@ export const Books = [
   },
   {
     id: 10,
-    Name: "ABCD",
-    Author: "EFGH",
+    Name: "Capital and Ideology",
+    Author: "Thomas Piketty",
     Likes: 10,
   },
   {
     id: 11,
-    Name: "The Heart of Yoga",
-    Author: "T.K.V Descikar",
+    Name: "Joy at work",
+    Author: "Scott",
     Likes: 11,
   },
 ];

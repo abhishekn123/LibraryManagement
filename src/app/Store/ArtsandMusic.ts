@@ -1,4 +1,4 @@
-export const Books = [
+export const ArtsAndMusic = [
   {
     id: 1,
     Name: "PersiPolis",
@@ -19,26 +19,26 @@ export const Books = [
   },
   {
     id: 4,
-    Name: "Titanic",
-    Author: "pary pope",
+    Name: "The HungerGames",
+    Author: "suzanne Colins",
     Likes: 4,
   },
   {
     id: 5,
-    Name: "The Night",
-    Author: "Elie Wiesiel",
+    Name: "The Road",
+    Author: "McCarthy",
     Likes: 5,
   },
   {
     id: 6,
-    Name: "In Cold Blood",
-    Author: "Truman",
+    Name: "The Shack",
+    Author: "William Paul",
     Likes: 6,
   },
   {
     id: 7,
-    Name: "Daring Grately",
-    Author: "Brene",
+    Name: "pride and prejuidse",
+    Author: "jane austin",
     Likes: 7,
   },
   {
@@ -49,8 +49,8 @@ export const Books = [
   },
   {
     id: 9,
-    Name: "WayMish",
-    Author: "Ray Considine",
+    Name: "Catching Fire",
+    Author: "suzzanne Collins",
     Likes: 9,
   },
   {
@@ -61,8 +61,8 @@ export const Books = [
   },
   {
     id: 11,
-    Name: "The Heart of Yoga",
-    Author: "T.K.V Descikar",
+    Name: "Digital Fortress",
+    Author: "Dan Brown",
     Likes: 11,
   },
 ];

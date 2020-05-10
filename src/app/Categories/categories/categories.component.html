@@ -75,7 +75,12 @@
         aria-labelledby="list-home-list"
       >
         <div class="row mt-3">
-          <div class="col mx-auto" *ngFor="let Book of AllBooks">
+          <div
+            class="col mx-auto"
+            *ngFor="
+              let Book of AllBooks | slice: AllBooklowValue:AllBookhighValue
+            "
+          >
             <app-book-list
               [BOOKNAME]="Book.Name"
               [AUTHORNAME]="Book.Author"
@@ -85,22 +90,82 @@
             ></app-book-list>
           </div>
         </div>
+
+        <mat-paginator
+          [length]="this.service.MyBook.length"
+          [pageSize]="AllBookpageSize"
+          (page)="getbook($event)"
+          [hidePageSize]="true"
+          style="outline-width: 0px;"
+        >
+        </mat-paginator>
       </div>
+
       <div
         class="tab-pane fade"
         id="list-profile"
         role="tabpanel"
         aria-labelledby="list-profile-list"
       >
-        IT and Software
+        <div class="row mt-3">
+          <div
+            class="col mx-auto"
+            *ngFor="
+              let Book of ArtsAndMusic | slice: ArtslowValue:ArtshighValue
+            "
+          >
+            <app-book-list
+              [BOOKNAME]="Book.Name"
+              [AUTHORNAME]="Book.Author"
+              [Like]="Book.Likes"
+              [IconName]="icon"
+              [id]="Book.id"
+            ></app-book-list>
+          </div>
+        </div>
+
+        <mat-paginator
+          [length]="this.ArtsAndMusic.length"
+          [pageSize]="ArtspageSize"
+          (page)="getArtsAndMusic($event)"
+          [hidePageSize]="true"
+          style="outline-width: 0px;"
+        >
+        </mat-paginator>
       </div>
+
       <div
         class="tab-pane fade"
         id="list-messages"
         role="tabpanel"
         aria-labelledby="list-messages-list"
       >
-        Science and Technology
+        <div class="row mt-3">
+          <div
+            class="col mx-auto"
+            *ngFor="
+              let Book of Biographies
+                | slice: BiographieslowValue:BiographieshighValue
+            "
+          >
+            <app-book-list
+              [BOOKNAME]="Book.Name"
+              [AUTHORNAME]="Book.Author"
+              [Like]="Book.Likes"
+              [IconName]="icon"
+              [id]="Book.id"
+            ></app-book-list>
+          </div>
+        </div>
+
+        <mat-paginator
+          [length]="this.ArtsAndMusic.length"
+          [pageSize]="BiographiespageSize"
+          (page)="getBiographies($event)"
+          [hidePageSize]="true"
+          style="outline-width: 0px;"
+        >
+        </mat-paginator>
       </div>
       <div
         class="tab-pane fade"
@@ -108,7 +173,31 @@
         role="tabpanel"
         aria-labelledby="list-settings-list"
       >
-        Business and Market
+        <div class="row mt-3">
+          <div
+            class="col mx-auto"
+            *ngFor="
+              let Book of Business | slice: BusinesslowValue:BusinesshighValue
+            "
+          >
+            <app-book-list
+              [BOOKNAME]="Book.Name"
+              [AUTHORNAME]="Book.Author"
+              [Like]="Book.Likes"
+              [IconName]="icon"
+              [id]="Book.id"
+            ></app-book-list>
+          </div>
+        </div>
+
+        <mat-paginator
+          [length]="this.ArtsAndMusic.length"
+          [pageSize]="BusinesspageSize"
+          (page)="getBusiness($event)"
+          [hidePageSize]="true"
+          style="outline-width: 0px;"
+        >
+        </mat-paginator>
       </div>
       <div
         class="tab-pane fade"
@@ -116,7 +205,29 @@
         role="tabpanel"
         aria-labelledby="list-Health-list"
       >
-        Health
+        <div class="row mt-3">
+          <div
+            class="col mx-auto"
+            *ngFor="let Book of Health | slice: HealthlowValue:HealthhighValue"
+          >
+            <app-book-list
+              [BOOKNAME]="Book.Name"
+              [AUTHORNAME]="Book.Author"
+              [Like]="Book.Likes"
+              [IconName]="icon"
+              [id]="Book.id"
+            ></app-book-list>
+          </div>
+        </div>
+
+        <mat-paginator
+          [length]="this.ArtsAndMusic.length"
+          [pageSize]="HealthpageSize"
+          (page)="getHealth($event)"
+          [hidePageSize]="true"
+          style="outline-width: 0px;"
+        >
+        </mat-paginator>
       </div>
       <div
         class="tab-pane fade"
@@ -124,7 +235,29 @@
         role="tabpanel"
         aria-labelledby="list-sports-list"
       >
-        Sports
+        <div class="row mt-3">
+          <div
+            class="col mx-auto"
+            *ngFor="let Book of Sports | slice: SportslowValue:SportshighValue"
+          >
+            <app-book-list
+              [BOOKNAME]="Book.Name"
+              [AUTHORNAME]="Book.Author"
+              [Like]="Book.Likes"
+              [IconName]="icon"
+              [id]="Book.id"
+            ></app-book-list>
+          </div>
+        </div>
+
+        <mat-paginator
+          [length]="this.ArtsAndMusic.length"
+          [pageSize]="SportspageSize"
+          (page)="getSports($event)"
+          [hidePageSize]="true"
+          style="outline-width: 0px;"
+        >
+        </mat-paginator>
       </div>
       <div
         class="tab-pane fade"
@@ -132,7 +265,32 @@
         role="tabpanel"
         aria-labelledby="list-Literature-list"
       >
-        Literature
+        <div class="row mt-3">
+          <div
+            class="col mx-auto"
+            *ngFor="
+              let Book of Literature
+                | slice: LiteraturelowValue:LiteraturehighValue
+            "
+          >
+            <app-book-list
+              [BOOKNAME]="Book.Name"
+              [AUTHORNAME]="Book.Author"
+              [Like]="Book.Likes"
+              [IconName]="icon"
+              [id]="Book.id"
+            ></app-book-list>
+          </div>
+        </div>
+
+        <mat-paginator
+          [length]="this.ArtsAndMusic.length"
+          [pageSize]="LiteraturepageSize"
+          (page)="getLiterature($event)"
+          [hidePageSize]="true"
+          style="outline-width: 0px;"
+        >
+        </mat-paginator>
       </div>
     </div>
   </div>

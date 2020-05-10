@@ -1,20 +1,20 @@
-export const Books = [
+export const Biographies = [
   {
     id: 1,
-    Name: "PersiPolis",
-    Author: "Marjane Satrapi",
+    Name: "Into The Wild",
+    Author: "Jon Karkauer",
     Likes: 1,
   },
   {
     id: 2,
-    Name: "The Hobbit",
-    Author: "J.R.T Tolkien",
+    Name: "The Glass Castle",
+    Author: "Jeannete walls",
     Likes: 2,
   },
   {
     id: 3,
-    Name: "Hatchet",
-    Author: "Gary Paulsen",
+    Name: "Think and Grow Rich ",
+    Author: "Napolean Hill",
     Likes: 3,
   },
   {
@@ -37,32 +37,32 @@ export const Books = [
   },
   {
     id: 7,
-    Name: "Daring Grately",
-    Author: "Brene",
+    Name: "Thunderstruck",
+    Author: "Erik Larson",
     Likes: 7,
   },
   {
     id: 8,
-    Name: "The Help",
-    Author: "Kathryn Stockett",
+    Name: "Survivors",
+    Author: "Allan Zullo",
     Likes: 8,
   },
   {
     id: 9,
-    Name: "WayMish",
-    Author: "Ray Considine",
+    Name: "Under The TusscanSun",
+    Author: "Frances Mayes",
     Likes: 9,
   },
   {
     id: 10,
-    Name: "ABCD",
-    Author: "EFGH",
+    Name: "Joan of Arc",
+    Author: "stanley",
     Likes: 10,
   },
   {
     id: 11,
-    Name: "The Heart of Yoga",
-    Author: "T.K.V Descikar",
+    Name: "call the midwife",
+    Author: "jeniffer",
     Likes: 11,
   },
 ];
