@@ -17,6 +17,7 @@ import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { UserComponent } from './user/user/user.component';
+import { AddbookComponent } from './AddBook/addbook/addbook.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { UserComponent } from './user/user/user.component';
     LoginComponent,
     HomeComponent,
     UserComponent,
+    AddbookComponent,
   ],
   imports: [
     BrowserModule,

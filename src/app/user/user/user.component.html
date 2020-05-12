@@ -24,8 +24,18 @@
       class="text-center"
       style="outline-color: white;"
       (click)="userloggedin = true"
+      routerLink="/Login"
     >
       <span>{{ UserState }}</span>
+    </button>
+    <button
+      mat-menu-item
+      class="text-center"
+      style="outline-color: white;"
+      (click)="userloggedin = true"
+      routerLink="/Register"
+    >
+      <span>Register</span>
     </button>
   </mat-menu>
   <button

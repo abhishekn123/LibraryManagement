@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
 
   navigate(event) {
     document.getElementById("HOME").style.borderBottom = "0px solid red";
-    document.getElementById("AUTHOR").style.borderBottom = "0px solid red";
     document.getElementById("ADDBOOK").style.borderBottom = "0px solid red";
 
     document.getElementById("HOME").style.transitionTimingFunction = "linear";

@@ -20,7 +20,6 @@ export class LibraryserviceService {
   Literature = Literature;
   Sports = Sports;
   Register(data) {
-    //Json data is stored inside the 'data' variable
     console.log("User Register Data", data);
     return this.http.get("copy paste the api Register url here");
   }
