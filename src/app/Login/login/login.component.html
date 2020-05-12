@@ -1,0 +1,46 @@
+<div class="container" style="margin-top: 50px;" [formGroup]="Login">
+  <div class="card mx-auto mr-3 ml-3" style="width: 300px;">
+    <div class="mx-auto mt-4 mb-2">
+      <i class="fas fa-user-circle" style="font-size: 70px; color: green;"></i>
+    </div>
+    <mat-form-field
+      appearance="outline"
+      style="margin: 20px; margin-bottom: 5px;"
+    >
+      <mat-label>EMAIL</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="Email" />
+      <mat-error *ngIf="Login.get('Email').invalid">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      style="margin: 20px; margin-bottom: 5px;"
+    >
+      <mat-label>PASSWORD</mat-label>
+      <input
+        matInput
+        placeholder="Placeholder"
+        type="password"
+        formControlName="Password"
+      />
+      <mat-error *ngIf="Login.get('Password').invalid">
+        password must be atleast 8 character</mat-error
+      >
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      style="margin: 20px; margin-bottom: 20px;"
+      [disabled]="
+        this.Login.get('Password').invalid || this.Login.get('Email').invalid
+      "
+      (click)="DoLogin()"
+    >
+      Login
+    </button>
+    <a href="/Register" class="text-center" style="text-decoration: none;"
+      >New User?</a
+    >
+  </div>
+</div>

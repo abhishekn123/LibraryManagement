@@ -1,0 +1,41 @@
+<div class="card mb-4 mx-auto" style="width: 14rem; border-radius: 25px;">
+  <img
+    src="https://blog.studocu.com/wp-content/uploads/2017/08/best-books-book-youll-ever-read.jpg"
+    class="card-img-top"
+    alt="..."
+  />
+  <div
+    class="card-body"
+    id="content"
+    style="
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      padding-bottom: 0px;
+    "
+  >
+    <h5 class="card-title" style="font-family: Roboto; font-weight: 600;">
+      {{ BOOKNAME }}
+    </h5>
+    <h6 style="font-family: Times; font-size: 15px;">{{ AUTHORNAME }}</h6>
+    <div style="display: flex; justify-content: space-between;">
+      <button type="button" class="btn btn-outline-info" style="flex: 0.8;">
+        Start Reading
+      </button>
+      <div style="display: flex; flex-direction: column; align-self: flex-end;">
+        <i
+          [ngStyle]="{
+            'font-size': '25px',
+            'padding-bottom': '0px',
+            cursor: 'pointer',
+            color: IconColor
+          }"
+          id="heart"
+          class="material-icons"
+          (click)="liked()"
+          >{{ like }}</i
+        >
+        <span style="font-size: 10px;">{{ Like }} LIKES</span>
+      </div>
+    </div>
+  </div>
+</div>
