@@ -25,19 +25,21 @@ export class BookListComponent implements OnInit {
   ngOnInit(): void {}
   liked() {
     let returnedBook;
-    returnedBook = this.service.MyBook.find((book) => book.id === this.id);
-    let returndecIndex = this.service.MyBook.findIndex(
+    returnedBook = this.service.ArtsAndMusic.find(
+      (book) => book.id === this.id
+    );
+    let returndecIndex = this.service.ArtsAndMusic.findIndex(
       (book) => book === returnedBook
     );
 
     this.like === "favorite_border"
       ? ((this.like = "favorite"),
         (this.IconColor = "red"),
-        (this.service.MyBook[returndecIndex].Likes =
-          this.service.MyBook[returndecIndex].Likes + 1))
+        (this.service.ArtsAndMusic[returndecIndex].Likes =
+          this.service.ArtsAndMusic[returndecIndex].Likes + 1))
       : ((this.like = "favorite_border"),
         (this.IconColor = "black"),
-        (this.service.MyBook[returndecIndex].Likes =
-          this.service.MyBook[returndecIndex].Likes - 1));
+        (this.service.ArtsAndMusic[returndecIndex].Likes =
+          this.service.ArtsAndMusic[returndecIndex].Likes - 1));
   }
 }

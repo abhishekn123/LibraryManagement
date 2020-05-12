@@ -16,12 +16,12 @@ import { Sports } from "./../../Store/Sports";
 export class CategoriesComponent implements OnInit {
   constructor(public service: LibraryserviceService) {}
   AllBooks = this.service.MyBook;
-  ArtsAndMusic = ArtsAndMusic;
-  Biographies = Biographies;
-  Health = Health;
-  Business = Business;
-  Literature = Literature;
-  Sports = Sports;
+  ArtsAndMusic = this.service.ArtsAndMusic;
+  Biographies = this.service.Biographies;
+  Health = this.service.Health;
+  Business = this.service.Business;
+  Literature = this.service.Literature;
+  Sports = this.service.Sports;
   icon = "favorite_border";
   getAllBooks() {
     this.AllBooks = this.service.MyBook;

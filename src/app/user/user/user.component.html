@@ -1,0 +1,49 @@
+<div>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+    style="outline-color: white;"
+    *ngIf="userloggedin === false"
+  >
+    <i
+      class="material-icons"
+      style="font-size: 30px; cursor: pointer;"
+      id="account"
+      data-container="body"
+      data-toggle="popover"
+      data-placement="bottom"
+      data-content="Vivamus
+    sagittis lacus vel augue laoreet rutrum faucibus."
+      >account_circle</i
+    >
+  </button>
+  <mat-menu #menu="matMenu" style="outline-width: 0px;">
+    <button
+      mat-menu-item
+      class="text-center"
+      style="outline-color: white;"
+      (click)="userloggedin = true"
+    >
+      <span>{{ UserState }}</span>
+    </button>
+  </mat-menu>
+  <button
+    mat-icon-button
+    style="outline-color: white;"
+    *ngIf="userloggedin === true"
+    (click)="userloggedin = false"
+  >
+    <i
+      class="material-icons"
+      style="font-size: 30px; cursor: pointer;"
+      id="account"
+      data-container="body"
+      data-toggle="popover"
+      data-placement="bottom"
+      data-content="Vivamus
+  sagittis lacus vel augue laoreet rutrum faucibus."
+      >exit_to_app</i
+    >
+  </button>
+</div>
