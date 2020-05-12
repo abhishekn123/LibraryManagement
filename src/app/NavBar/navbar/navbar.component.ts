@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import "material-design-icons/iconfont/material-icons.css";
 
 @Component({
   selector: "app-navbar",
@@ -13,6 +14,9 @@ export class NavbarComponent implements OnInit {
     HOME.style.borderBottomWidth = "3px";
     HOME.style.borderBottomColor = "blue";
     HOME.style.borderBottomStyle = "solid";
+  }
+  popover() {
+    console.log("popover");
   }
   //CSS DESIGN STARTS HERE
 
