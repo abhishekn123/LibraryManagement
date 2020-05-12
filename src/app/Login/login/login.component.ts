@@ -22,6 +22,9 @@ export class LoginComponent implements OnInit {
     this.service.Login({
       email: this.Login.get("Email").value,
       password: this.Login.get("Password").value,
-    });
+    }).subscribe(data=>
+      {
+        console.log(data)
+      });
   }
 }
